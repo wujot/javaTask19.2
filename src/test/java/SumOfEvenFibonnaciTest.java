@@ -5,31 +5,31 @@ import org.junit.Test;
 public class SumOfEvenFibonnaciTest {
 
     @Test
+    public void shouldReturn10() {
+
+        // given
+        SumOfEvenFibonnaci sumOfEvenFibonnaci = new SumOfEvenFibonnaci();
+        int maxValue = 10;
+
+        // when
+        int result = sumOfEvenFibonnaci.sumOfEvenFibonacci(maxValue);
+
+        // then
+        Assert.assertThat(result, CoreMatchers.is(10));
+    }
+
+    @Test
     public void shouldReturn44() {
 
         // given
         SumOfEvenFibonnaci sumOfEvenFibonnaci = new SumOfEvenFibonnaci();
-        int terms = 10;
+        int maxValue = 100;
 
         // when
-        int result = sumOfEvenFibonnaci.sumOfEvenFibonacci(terms);
+        int result = sumOfEvenFibonnaci.sumOfEvenFibonacci(maxValue);
 
         // then
         Assert.assertThat(result, CoreMatchers.is(44));
-    }
-
-    @Test
-    public void shouldReturn14328() {
-
-        // given
-        SumOfEvenFibonnaci sumOfEvenFibonnaci = new SumOfEvenFibonnaci();
-        int terms = 20;
-
-        // when
-        int result = sumOfEvenFibonnaci.sumOfEvenFibonacci(terms);
-
-        // then
-        Assert.assertThat(result, CoreMatchers.is(14328));
     }
 
     @Test
@@ -37,10 +37,10 @@ public class SumOfEvenFibonnaciTest {
 
         // given
         SumOfEvenFibonnaci sumOfEvenFibonnaci = new SumOfEvenFibonnaci();
-        int terms = 40;
+        int maxValue = 4000000;
 
         // when
-        int result = sumOfEvenFibonnaci.sumOfEvenFibonacci(terms);
+        int result = sumOfEvenFibonnaci.sumOfEvenFibonacci(maxValue);
 
         // then
         Assert.assertThat(result, CoreMatchers.is(4613732));
